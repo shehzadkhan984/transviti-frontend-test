@@ -1,4 +1,5 @@
 import { Bookmark, BookMarked, Clock, MapPin, Save } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 import { Button } from "~/components/ui/button";
 
 export default function JobListing(props: {
@@ -26,8 +27,25 @@ export default function JobListing(props: {
                 Promoted
               </p>
             )}
-            <h4 className="font-semibold text-sm mb-1">UI/UX Designer</h4>
-            <p className="text-gray-500 text-xs mb-2">Teams</p>
+            <div className=" flex  items-center gap-2 ">
+              <div>
+                <img
+                  src="/assets/teams.png"
+                  className="h-10 w-10 border-0 rounded-full object-contain "
+                />
+                {/* <Avatar className=" rounded-full shadow-sm  text-sm">
+                  <AvatarImage
+                    src="/assets/teams.png"
+                    className="h-12 w-12 border-0 object-contain "
+                  />
+                  <AvatarFallback>SM</AvatarFallback>
+                </Avatar> */}
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm mb-1">UI/UX Designer</h4>
+                <p className="text-gray-500 text-xs mb-2">Teams</p>
+              </div>
+            </div>
             <div className="flex items-center text-gray-400 text-xs mb-1">
               <MapPin className="w-3 h-3 mr-1" />
               Seattle, USA (Remote)
