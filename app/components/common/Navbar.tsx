@@ -28,7 +28,7 @@ export default function Navbar() {
         </div>
 
         {/* Center: Nav Links */}
-        <nav className="hidden lg:flex gap-6 text-sm text-gray-600">
+        <nav className="hidden xl:flex gap-6 text-sm text-gray-600">
           {navLinks.map((link) => (
             <a
               key={link}
@@ -44,7 +44,7 @@ export default function Navbar() {
       </div>
 
       {/* Right: Search + Button + Avatar */}
-      <div className="hidden lg:flex items-center gap-3 ">
+      <div className="hidden xl:flex items-center gap-3 ">
         <div className="relative">
           <Input
             placeholder="Search"
@@ -67,15 +67,18 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Hamburger */}
-      <div className="lg:hidden">
-        <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
+      <div className="xl:hidden">
+        <button
+          className="cursor-pointer"
+          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+        >
           <Menu />
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-20 shadow-md  rounded-lg left-0 right-0 bg-white z-50 p-4 flex flex-col gap-3 lg:hidden">
+        <div className="absolute top-18 shadow-md  rounded-lg  right-2 bg-white z-50 p-4 flex flex-col gap-3 xl:hidden">
           {navLinks.map((link) => (
             <a key={link} href="#" className="text-gray-700 hover:text-card">
               {link}
