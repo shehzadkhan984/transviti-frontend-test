@@ -1,0 +1,45 @@
+import { Bookmark, BookMarked, Clock, MapPin, Save } from "lucide-react";
+import { Button } from "~/components/ui/button";
+
+export default function JobListing(props: {
+  name: string;
+  link: string;
+  count: number;
+  promoted: boolean;
+}) {
+  return (
+    <div>
+      <div className="flex justify-between items-center mb-2">
+        <h3 className="text-lg font-semibold">{props?.name}</h3>
+        <a href="#" className="text-blue-600 text-sm font-medium">
+          See {props?.name}
+        </a>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {Array.from({ length: props?.count ?? 4 }).map((_, i) => (
+          <div key={i} className="bg-white p-4 rounded-xl shadow-sm">
+            {props?.promoted && (
+              <p className="text-xs text-blue-700 font-medium mb-2">Promoted</p>
+            )}
+            <h4 className="font-semibold text-sm mb-1">UI/UX Designer</h4>
+            <p className="text-gray-500 text-xs mb-2">Teams</p>
+            <div className="flex items-center text-gray-400 text-xs mb-1">
+              <MapPin className="w-3 h-3 mr-1" />
+              Seattle, USA (Remote)
+            </div>
+            <div className="text-gray-400 flex items-center text-xs mb-3">
+              <Clock className="w-3 h-3 mr-1" /> 1 day ago |{" "}
+              <span className=" text-blue-700"> 22 applicants</span>
+            </div>
+            <div className=" flex items-center justify-between gap-4 ">
+              <Button className="bg-blue-700 flex-1 cursor-pointer text-white w-full">
+                Apply Now
+              </Button>
+              <Bookmark className="cursor-pointer text-muted-foreground" />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
