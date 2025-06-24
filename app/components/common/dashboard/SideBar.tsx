@@ -40,17 +40,17 @@ export default function SideBar() {
       <div className="bg-white rounded-xl shadow-sm p-4 space-y-3 text-sm">
         <div className="flex justify-between text-gray-500">
           <span>Profile Visitors</span>
-          <span className="text-blue-700 font-semibold">140</span>
+          <span className="text-[#0154AA] font-semibold">140</span>
         </div>
         <hr className="border-gray-200" />
         <div className="flex justify-between text-gray-500">
           <span>Resume Viewers</span>
-          <span className="text-blue-700 font-semibold">20</span>
+          <span className="text-[#0154AA] font-semibold">20</span>
         </div>
         <hr className="border-gray-200" />
         <div className="flex justify-between text-gray-500">
           <span>My Jobs</span>
-          <span className="text-blue-700 font-semibold">88</span>
+          <span className="text-[#0154AA] font-semibold">88</span>
         </div>
       </div>
 

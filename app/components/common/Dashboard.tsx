@@ -22,7 +22,7 @@ export default function Dashboard() {
           <div className="space-y-2">
             <h2 className="text-xl font-semibold">
               Find your Dream Job,{" "}
-              <span className="text-blue-700">Albert!</span>
+              <span className="text-[#0154AA]">Albert!</span>
             </h2>
             <p className="text-sm text-gray-500">
               Explore the latest job openings and apply for the best

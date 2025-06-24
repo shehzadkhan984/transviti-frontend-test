@@ -38,7 +38,7 @@ export default function SearchRow() {
       <Button className=" bg-transparent text-muted-foreground cursor-pointer  hover:bg-transparent    flex items-center border-0 shadow-none justify-between">
         Job Type <ChevronDown className="ml-2 h-4 w-4" />
       </Button>
-      <Button className="bg-blue-700 cursor-pointer text-white px-6">
+      <Button className="bg-card cursor-pointer text-white px-6">
         <Search className="mr-2 h-4 w-4" /> Search
       </Button>
     </div>

@@ -9,9 +9,12 @@ export default function JobListing(props: {
 }) {
   return (
     <div>
-      <div className="flex justify-between items-center mb-2">
+      <div className="flex  items-center mb-2 gap-3">
         <h3 className="text-lg font-semibold">{props?.name}</h3>
-        <a href="#" className="text-blue-600 text-sm font-medium">
+        <a
+          href={props.link ?? "#"}
+          className="text-[#0154AA] text-sm font-medium underline"
+        >
           See {props?.name}
         </a>
       </div>
@@ -19,7 +22,9 @@ export default function JobListing(props: {
         {Array.from({ length: props?.count ?? 4 }).map((_, i) => (
           <div key={i} className="bg-white p-4 rounded-xl shadow-sm">
             {props?.promoted && (
-              <p className="text-xs text-blue-700 font-medium mb-2">Promoted</p>
+              <p className="text-xs text-[#0154AA] font-medium mb-2">
+                Promoted
+              </p>
             )}
             <h4 className="font-semibold text-sm mb-1">UI/UX Designer</h4>
             <p className="text-gray-500 text-xs mb-2">Teams</p>
@@ -29,10 +34,10 @@ export default function JobListing(props: {
             </div>
             <div className="text-gray-400 flex items-center text-xs mb-3">
               <Clock className="w-3 h-3 mr-1" /> 1 day ago |{" "}
-              <span className=" text-blue-700"> 22 applicants</span>
+              <span className=" text-[#0154AA]"> 22 applicants</span>
             </div>
             <div className=" flex items-center justify-between gap-4 ">
-              <Button className="bg-blue-700 flex-1 cursor-pointer text-white w-full">
+              <Button className="bg-card flex-1 cursor-pointer text-white w-full">
                 Apply Now
               </Button>
               <Bookmark className="cursor-pointer text-muted-foreground" />

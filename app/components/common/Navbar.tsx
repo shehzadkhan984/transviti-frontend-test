@@ -33,8 +33,8 @@ export default function Navbar() {
             <a
               key={link}
               href="#"
-              className={`hover:text-blue-700 transition ${
-                link === "Find Jobs" ? "font-semibold text-blue-800" : ""
+              className={`hover:text-card transition ${
+                link === "Find Jobs" ? "font-semibold text-card" : ""
               }`}
             >
               {link}
@@ -54,11 +54,14 @@ export default function Navbar() {
             <Search className="w-4 h-4" />
           </span>
         </div>
-        <Button className="bg-blue-700 hover:bg-blue-800 text-white rounded-md px-4">
+        <Button className="bg-card hover:bg-card text-white rounded-md px-4">
           Resume Builder
         </Button>
-        <Avatar className=" rounded-full shadow-sm p-1 text-sm">
-          <AvatarImage src="/avatar.jpg" />
+        <Avatar className=" rounded-full shadow-sm  text-sm">
+          <AvatarImage
+            src="/assets/profile.png"
+            className="h-10 w-10 border-0 object-cover "
+          />
           <AvatarFallback>SM</AvatarFallback>
         </Avatar>
       </div>
@@ -74,16 +77,12 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="absolute top-20 shadow-md  rounded-lg left-0 right-0 bg-white z-50 p-4 flex flex-col gap-3 lg:hidden">
           {navLinks.map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="text-gray-700 hover:text-blue-700"
-            >
+            <a key={link} href="#" className="text-gray-700 hover:text-card">
               {link}
             </a>
           ))}
           <Input placeholder="Search" className="bg-gray-100" />
-          <Button className="bg-blue-700 text-white">Resume Builder</Button>
+          <Button className="bg-card text-white">Resume Builder</Button>
         </div>
       )}
     </header>
